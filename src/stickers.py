@@ -4,9 +4,9 @@ from PIL import Image
 from io import BytesIO
 import re
 
-request = requests.get("https://mocki.io/v1/9a7c1ca9-29b4-4eb3-8306-1adb9d159060").json()
+response = requests.get("https://mocki.io/v1/9a7c1ca9-29b4-4eb3-8306-1adb9d159060").json()
 
-films = request["items"]
+films = response["items"]
 
 try:os.makedirs('stickers')
 except FileExistsError: pass
